@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Jquery</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="css/styles.css" charset="utf-8">
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Slider Example</h1>
+    <div class="slider">
+      <ul class="slider-container">
+        <li class="slider-item">
+          <h2>One</h2>
+          <p>Lorem blanditiis molestias perspiciatis porro cupiditate. Ad reiciendis explicabo quisquam cupiditate rem aliquid magnam totam commodi! Dolor numquam maiores laboriosam?</p>
+        </li>
+        <li class="slider-item">
+          <h2>Two</h2>
+          <p>Ipsum aut perferendis corporis deleniti eveniet? Numquam fuga amet vero debitis minima quia. Et iste dolorum error ipsam porro deserunt.</p>
+        </li>
+        <li class="slider-item">
+          <h2>Three</h2>
+          <p>Lorem autem nemo eveniet ut atque? Incidunt reprehenderit odit deleniti dicta temporibus! Adipisci rerum sunt officiis tenetur voluptatum consectetur. Fugiat.</p>
+        </li>
+        <li class="slider-item">
+          <h2>Four</h2>
+          <p>Amet quisquam sunt neque nulla facere? Culpa quo aspernatur sed est dicta reprehenderit cum sequi ea? Aspernatur non recusandae officia.</p>
+        </li>
+      </ul>
+      <a href="#" data-prev='prev' class="slider-prev">Prev</a>
+      <a href="#" data-next='next' class="slider-next">Next</a>
+    </div>
+
+
+    <div class="slider-two">
+      <ul class="slider-container">
+        <li class="slider-item">
+          <h2>One</h2>
+          <p>Lorem blanditiis molestias perspiciatis porro cupiditate. Ad reiciendis explicabo quisquam cupiditate rem aliquid magnam totam commodi! Dolor numquam maiores laboriosam?</p>
+        </li>
+        <li class="slider-item">
+          <h2>Two</h2>
+          <p>Ipsum aut perferendis corporis deleniti eveniet? Numquam fuga amet vero debitis minima quia. Et iste dolorum error ipsam porro deserunt.</p>
+        </li>
+        <li class="slider-item">
+          <h2>Three</h2>
+          <p>Lorem autem nemo eveniet ut atque? Incidunt reprehenderit odit deleniti dicta temporibus! Adipisci rerum sunt officiis tenetur voluptatum consectetur. Fugiat.</p>
+        </li>
+        <li class="slider-item">
+          <h2>Four</h2>
+          <p>Amet quisquam sunt neque nulla facere? Culpa quo aspernatur sed est dicta reprehenderit cum sequi ea? Aspernatur non recusandae officia.</p>
+        </li>
+      </ul>
+      <a href="#" data-prev='prev' class="slider-prev">Prev</a>
+      <a href="#" data-next='next' class="slider-next">Next</a>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="js/truncate.js"></script>
+  <script src="js/slider-new.js"></script>
+  <script type="text/javascript">
+    // $('.slider').slider().find('p').truncate()
+  $('.slider').sliderNew().find('p').css('color', 'red').truncate({
+    words: 5    
+  });
+  $('.slider-two').sliderNew();
+  </script>
+</body>
+</html>
