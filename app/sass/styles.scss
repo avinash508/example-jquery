@@ -22,14 +22,13 @@ body {
   }
 }
 
-.slider-wrapper {
-  width: 100%;
-  height: auto; 
+#slider {
   position: relative;
 }
 
-.slider,
-.slider-two{
+.slider-wrapper {
+  width: 100%;
+  height: auto; 
   position: relative;
   overflow: hidden;
 }

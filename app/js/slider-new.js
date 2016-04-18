@@ -24,7 +24,6 @@
   Slider.prototype.init = function() {
     this.build();
     this.bindEvents();
-    console.log('Initializing plugin ' + this.$options.name);
   };
   
 
@@ -44,17 +43,12 @@
     this.$next.on('click', this.next.bind(this)); 
   };
 
-  Slider.prototype._move = function(count, dir) {
-    if(dir == 'next') {
-      this.current++;
-    } else {
-      this.current--;
-    }
+  Slider.prototype._move = function(dir) {
+    var pos = this.current;
+    var len = this.$container.children().length;
+    pos += ( ~~(dir === 'next') || -1);
 
-    if (count <=0 || count >= 3) {
-      return false;
-    }
-
+    this.current = (pos < 0) ? len - 1 : pos % len;
     this.$container.css({
       marginLeft: - (this.current * 100) + '%'
     });
@@ -63,13 +57,13 @@
 
   Slider.prototype.prev = function(e) {
     e.preventDefault();
-    this._move(this.current, this.$prev.data('prev'));
+    this._move(this.$prev.data('prev'));
   };
 
 
   Slider.prototype.next = function(e) {
     e.preventDefault();
-    this._move(this.current, this.$next.data('next'));
+    this._move(this.$next.data('next'));
   };
 
   $.fn.sliderNew = function(options) {
