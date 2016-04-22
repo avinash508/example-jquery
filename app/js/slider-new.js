@@ -43,7 +43,8 @@
     this.$next.on('click', this.next.bind(this)); 
   };
 
-  Slider.prototype._move = function(dir) {
+  Slider.prototype._move = function(e, dir) {
+    e.preventDefault();
     var pos = this.current;
     var len = this.$container.children().length;
     pos += ( ~~(dir === 'next') || -1);
@@ -56,17 +57,15 @@
 
 
   Slider.prototype.prev = function(e) {
-    e.preventDefault();
-    this._move(this.$prev.data('prev'));
+    this._move(e, this.$prev.data('prev'));
   };
 
 
   Slider.prototype.next = function(e) {
-    e.preventDefault();
-    this._move(this.$next.data('next'));
+    this._move(e, this.$next.data('next'));
   };
 
-  $.fn.sliderNew = function(options) {
+  $.fn.carousel = function(options) {
     return this.each(function() {
       var element = $(this);
       return new Slider(element, options);

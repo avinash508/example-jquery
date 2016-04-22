@@ -3,29 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Project Jquery</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="css/styles.css" charset="utf-8">
 </head>
 <body>
   <div id="wrapper">
-    <h1>Slider Example</h1>
+    <h1>Carousel Example</h1>
     <div id="slider">
       <div class="slider-wrapper">
         <ul class="slider-container">
           <li class="slider-item">
             <h2>One</h2>
+            <img src="http://loremflickr.com/980/300/dogs" alt="Dogs" />
             <p>Lorem blanditiis molestias perspiciatis porro cupiditate. Ad reiciendis explicabo quisquam cupiditate rem aliquid magnam totam commodi! Dolor numquam maiores laboriosam?</p>
           </li>
           <li class="slider-item">
             <h2>Two</h2>
+            <img src="http://loremflickr.com/980/300/people" alt="People" />
             <p>Ipsum aut perferendis corporis deleniti eveniet? Numquam fuga amet vero debitis minima quia. Et iste dolorum error ipsam porro deserunt.</p>
           </li>
           <li class="slider-item">
             <h2>Three</h2>
+            <img src="http://loremflickr.com/980/300/person" alt="Person" />
             <p>Lorem autem nemo eveniet ut atque? Incidunt reprehenderit odit deleniti dicta temporibus! Adipisci rerum sunt officiis tenetur voluptatum consectetur. Fugiat.</p>
           </li>
           <li class="slider-item">
             <h2>Four</h2>
+            <img src="http://loremflickr.com/980/300/cats" alt="Cats" />
             <p>Amet quisquam sunt neque nulla facere? Culpa quo aspernatur sed est dicta reprehenderit cum sequi ea? Aspernatur non recusandae officia.</p>
           </li>
         </ul>
@@ -38,9 +43,9 @@
   <script src="js/truncate.js"></script>
   <script src="js/slider-new.js"></script>
   <script type="text/javascript">
-  $('#slider').sliderNew().find('p').css('color', 'red').truncate({
-    words: 5    
-  });
+    $('#slider').carousel().find('p').css('color', 'tomato').truncate({
+      words: 5    
+    });
   </script>
 </body>
 </html>
